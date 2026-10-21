@@ -1,0 +1,16 @@
+# Ignore virtual environment & Python cache
+venv/
+__pycache__/
+*.pyc
+
+# Ignore secret API key (Never push .env to GitHub!)
+.env
+
+# Ignore old uncompressed JSON files or temporary slim DBs
+data_cache/*.json
+data_cache/web2api_slim.db
+data_cache/*.part*
+
+# Explicitly KEEP the 50.58 MB SQLite database and AI blueprints
+!data_cache/web2api.db
+!blueprints_cache/*.json

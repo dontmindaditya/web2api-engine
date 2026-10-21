@@ -1,0 +1,50 @@
+{
+  "domain": "nomenclator.anm.ro",
+  "repeating_row_selector": "table tbody tr",
+  "pagination": {
+    "url_template": "https://nomenclator.anm.ro/medicamente?page={page}",
+    "rows_per_page": 20,
+    "total_pages_detected": 1633
+  },
+  "summary_fields": [
+    {
+      "field_name": "denumire_comerciala",
+      "css_selector": "td:nth-child(2)",
+      "extract_type": "text"
+    },
+    {
+      "field_name": "dci",
+      "css_selector": "td:nth-child(3)",
+      "extract_type": "text"
+    },
+    {
+      "field_name": "forma_farmaceutica",
+      "css_selector": "td:nth-child(4)",
+      "extract_type": "text"
+    },
+    {
+      "field_name": "cod_atc",
+      "css_selector": "td:nth-child(5)",
+      "extract_type": "text"
+    },
+    {
+      "field_name": "cod_cim",
+      "css_selector": "td:nth-child(6)",
+      "extract_type": "text"
+    },
+    {
+      "field_name": "firma_tara_detinatoare_app",
+      "css_selector": "td:nth-child(7)",
+      "extract_type": "text"
+    }
+  ],
+  "detail_modal": {
+    "has_detail_trigger": true,
+    "trigger_selector": "td:nth-child(1) button, button:has-text('Detalii'), a:has-text('Detalii')",
+    "container_selector": ".modal-content",
+    "close_selector": ".modal-footer button, button.close, button:has-text('Închide')",
+    "kv_row_selector": "table tr",
+    "label_selector": "td:nth-child(1), th:nth-child(1)",
+    "value_selector": "td:nth-child(2)"
+  }
+}

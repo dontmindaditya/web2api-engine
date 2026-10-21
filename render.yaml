@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: web2api-engine
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: NVIDIA_BASE_URL
+        value: https://integrate.api.nvidia.com/v1
+      - key: NVIDIA_MODEL
+        value: nvidia/nemotron-3.5-super-vl-120b-a12b
